@@ -15,8 +15,12 @@ def exec_shell(command: str):
     :return error: string      错误
     :return returncode: string      返回码
     """
+    logging.info(f"即将执行命令: {command}")
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = process.communicate()
+    logging.info(f"执行结果:\n{output}")
+    if error:
+        logging.error(f"执行错误:\n{error}")
     return output.decode('utf-8'), error.decode('utf-8'), process.returncode
 
 
