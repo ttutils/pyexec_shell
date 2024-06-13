@@ -11,7 +11,7 @@ with io.open("requirements.txt", 'r') as f:
 
 setup(
     name='pyexec_shell',
-    version='1.0.3',
+    version='1.0.4',
     description='shell助手',
     author='buyfakett',
     author_email='buyfakett@vip.qq.com',
