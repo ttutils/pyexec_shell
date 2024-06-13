@@ -15,7 +15,7 @@ def exec_shell(command: str):
     :return error: string      错误
     :return returncode: string      返回码
     """
-    logging.info(f"即将执行命令: {command}")
+    logging.info(f"正在执行命令: {command}")
     process = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     output, error = process.communicate()
     logging.info(f"执行结果:\n{output}")
